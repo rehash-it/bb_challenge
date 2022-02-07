@@ -1,12 +1,14 @@
 import {
 	dateFormats,
-    languageCodes
+    supportedLanguages
 } from '../config';
 
 export const getLanguageDateFormat = (languageCode: string , date : string) => {
+
+    console.log(languageCode);
     const dateFormat = new Date(date);
 	if (languageCode) {
-		if (languageCode === languageCodes.EN) {
+		if (languageCode === supportedLanguages.EN) {
 			return (
                 dateFormat.getDate() +
                 " " +
@@ -15,7 +17,7 @@ export const getLanguageDateFormat = (languageCode: string , date : string) => {
                 dateFormat.getFullYear()
               );
 		}
-		if (languageCode === languageCodes.ES) {
+		if (languageCode === supportedLanguages.ES) {
 			return (
                 dateFormat.getDate() +
                 " " +

@@ -8,7 +8,9 @@ module.exports = {
                 lessLoaderOptions: {
                     lessOptions: {
                         modifyVars: {
-                            '@btn-padding-horizontal-base': '50px',
+                            '@btn-border-width': '0px',
+                            '@btn-primary-bg' : '#F5F5F7',
+                            '@btn-border-radius-base' : '8px'   
                         },
                         javascriptEnabled: true,
                     },

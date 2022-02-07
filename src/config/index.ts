@@ -1,25 +1,18 @@
 export const supportedLanguages = {
-	en: 'English',
-	es: 'Spanish',
-};
-
-export const languageCodes = {
 	EN: 'en',
 	ES: 'es',
 };
 
-
-export const url = "https://assignment-fa.brandbassador.com/graphql"
+export const url = "https://assignment-fa.brandbassador.com/graphql";
 
 export const LIMIT = 4;
-
 export const dateFormats = {
 	es: {
 		months:
 			[
 				"Enero",
 				"Febrero",
-				"Marzo",
+				"Marcha",
 				"Abril",
 				"Mayo",
 				"Junio",

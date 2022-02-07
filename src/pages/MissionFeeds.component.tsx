@@ -6,8 +6,13 @@ import FeedQuery from "../types/FeedQuery";
 import { LIMIT } from "../config";
 import MissionFeedItem from "../components/MissionFeedItem/MissionFeedItem.component";
 import Spinner from "../components/Spinner/Spinner.component";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { useSelector } from "react-redux";
+import { selectTranslations } from "../redux/i18n/i18nSlice";
 
 const MissionFeeds = (): JSX.Element => {
+  const t = useSelector(selectTranslations);
+
   const [feeds, setFeeds] = useState<Feed[]>([]);
   const [hasMore, setHasMore] = useState(true);
   const { data, fetchMore } = useQuery<FeedQuery>(LOAD_FEED, {
@@ -40,11 +45,23 @@ const MissionFeeds = (): JSX.Element => {
     setFeeds(newFeed);
   };
   return (
-    <>
-      {feeds.map((feed, index) => (
-        <MissionFeedItem key={index} {...feed} />
-      ))}
-    </>
+    <InfiniteScroll
+      dataLength={feeds.length}
+      next={fetchMoreFeed}
+      hasMore={hasMore}
+      height={800}
+      loader={<Spinner />}
+      endMessage={
+        <p style={{ textAlign: "center" }}>
+          <b>{t.EndMessage }</b>
+        </p>
+      }
+    >
+      {feeds &&
+        feeds.map((item: Feed) => {
+          return <MissionFeedItem {...item} />;
+        })}
+    </InfiniteScroll>
   );
 };
 
