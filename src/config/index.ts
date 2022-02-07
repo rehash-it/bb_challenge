@@ -5,7 +5,8 @@ export const supportedLanguages = {
 
 export const url = "https://assignment-fa.brandbassador.com/graphql";
 
-export const LIMIT = 4;
+export const DEFAULT_LIMIT = 4;
+export const DEFAULT_OFFSET = 0
 export const dateFormats = {
 	es: {
 		months:

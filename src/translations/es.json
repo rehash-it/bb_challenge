@@ -1,6 +1,8 @@
 {
   "English": "Inglés",
   "Spanish": "Española",
-  "EndMessage" : "Estás todo atrapado"
+  "EndMessage" : "Estás todo atrapado",
+  "Cash" : "Efectivo",
+  "Reward" : "Recompensa"
 
 }

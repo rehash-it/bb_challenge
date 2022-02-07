@@ -9,8 +9,8 @@ module.exports = {
                     lessOptions: {
                         modifyVars: {
                             '@btn-border-width': '0px',
-                            '@btn-primary-bg' : '#F5F5F7',
-                            '@btn-border-radius-base' : '8px'   
+                            '@btn-primary-bg': '#F5F5F7',
+                            '@btn-border-radius-base': '8px',
                         },
                         javascriptEnabled: true,
                     },
@@ -18,4 +18,5 @@ module.exports = {
             },
         },
     ],
+
 };

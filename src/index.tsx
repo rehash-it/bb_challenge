@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import "./index.scss";
+import "./index.less";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import {
@@ -15,11 +15,12 @@ import { url } from "./config";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistor, store } from "./redux/store";
 import { Provider } from "react-redux";
+import { message as ErrorMessage} from 'antd'
 
 const errorLink = onError(({ graphQLErrors }) => {
   if (graphQLErrors)
     graphQLErrors.map(({ message }) => {
-      console.error(`Graphql error ${message}`);
+      ErrorMessage.error(`Graphql error ${message}`);
     });
 });
 
