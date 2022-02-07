@@ -5,7 +5,6 @@ import { ReactComponent as GiftIcon } from "../../assets/gift.svg";
 import { getLanguageDateFormat } from "../../utils/GetDateFormat";
 import { selectTranslations } from "../../redux/i18n/i18nSlice";
 import CashTag from "../CashTag/CashTag.component";
-
 import "./MissionFeedItem.styles.less";
 
 const { Meta } = Card;
@@ -18,10 +17,9 @@ const cardStyle = {
 const MissionFeedItem = (feedItem: Feed): JSX.Element => {
   const t = useSelector(selectTranslations);
   const lang = useSelector((state: any) => state.i18n.lang);
-
   return (
     <div className="mission-feed-container">
-      {feedItem.date && (
+      { feedItem.date && (
         <div className="date-offset">
           {getLanguageDateFormat(lang, feedItem.date)}
         </div>
