@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="2" failures="0" errors="0" time="0.604">
-  <testsuite name="src/__tests__/App.test.tsx" errors="0" failures="0" skipped="0" timestamp="2022-02-09T20:37:04" time="0.456" tests="1">
-    <testcase classname=" true" name=" true" time="0.001">
+<testsuites name="jest tests" tests="3" failures="2" errors="0" time="3.06">
+  <testsuite name="src/__tests__/LangSwitcher.text.tsx" errors="0" failures="1" skipped="0" timestamp="2022-02-09T21:40:02" time="0.823" tests="1">
+    <testcase classname=" CheckboxWithLabel changes the text after click" name=" CheckboxWithLabel changes the text after click" time="0.001">
+      <failure>TypeError: For queries bound to document.body a global document has to be available... Learn more: https://testing-library.com/s/screen-global-error
+    at Object.getByLabelText (/Users/rehana/bb-challenge/node_modules/@testing-library/dom/dist/screen.js:64:11)
+    at Object.&lt;anonymous&gt; (/Users/rehana/bb-challenge/src/__tests__/LangSwitcher.text.tsx:4:16)
+    at Promise.then.completed (/Users/rehana/bb-challenge/node_modules/jest-circus/build/utils.js:391:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/rehana/bb-challenge/node_modules/jest-circus/build/utils.js:316:10)
+    at _callCircusTest (/Users/rehana/bb-challenge/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at _runTest (/Users/rehana/bb-challenge/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/Users/rehana/bb-challenge/node_modules/jest-circus/build/run.js:66:9)
+    at run (/Users/rehana/bb-challenge/node_modules/jest-circus/build/run.js:25:3)</failure>
     </testcase>
   </testsuite>
-  <testsuite name="src/__tests__/LangSwitcher.text.tsx" errors="0" failures="0" skipped="0" timestamp="2022-02-09T20:37:04" time="0.078" tests="1">
-    <testcase classname=" true" name=" true" time="0">
+  <testsuite name="src/__tests__/MissionFeedItem.test.tsx" errors="0" failures="1" skipped="0" timestamp="2022-02-09T21:40:03" time="1.998" tests="1">
+    <testcase classname=" should render the dog breed" name=" should render the dog breed" time="0.002">
+      <failure>ReferenceError: React is not defined
+    at _callee$ (/Users/rehana/bb-challenge/src/__tests__/MissionFeedItem.test.tsx:24:3)
+    at tryCatch (/Users/rehana/bb-challenge/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/rehana/bb-challenge/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/rehana/bb-challenge/node_modules/regenerator-runtime/runtime.js:119:21)
+    at asyncGeneratorStep (/Users/rehana/bb-challenge/src/__tests__/MissionFeedItem.test.tsx:11:103)
+    at _next (/Users/rehana/bb-challenge/src/__tests__/MissionFeedItem.test.tsx:13:194)
+    at /Users/rehana/bb-challenge/src/__tests__/MissionFeedItem.test.tsx:13:364
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (/Users/rehana/bb-challenge/src/__tests__/MissionFeedItem.test.tsx:13:97)
+    at Promise.then.completed (/Users/rehana/bb-challenge/node_modules/jest-circus/build/utils.js:391:28)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="src/__tests__/App.test.tsx" errors="0" failures="0" skipped="0" timestamp="2022-02-09T21:40:05" time="0.101" tests="1">
+    <testcase classname=" language button renders with correct text" name=" language button renders with correct text" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>
