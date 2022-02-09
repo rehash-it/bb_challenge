@@ -6,23 +6,25 @@ import "./LangSwitcher.styles.less";
 
 const LangSwitcher = (): JSX.Element => {
   const t = useSelector(selectTranslations);
+  const lang = useSelector((state: any) => state.i18n.lang);
   const dispatch = useDispatch();
   const handleLangChange = (newLang: string) => {
     dispatch(setLang(newLang));
   };
-
   return (
     <div>
-      <span className="custom-btn">
+      <span className="custom-btn-container">
         <Button
+          className={lang === 'en' ? 'custom-btn-active' : ''}
           type="primary"
           onClick={() => handleLangChange(supportedLanguages.EN)}
         >
           {t.English}
         </Button>
       </span>
-      <span className="custom-btn">
+      <span className="custom-btn-container">
         <Button
+         className={lang === 'es' ? 'custom-btn-active' : ''}
           type="primary"
           onClick={() => handleLangChange(supportedLanguages.ES)}
         >

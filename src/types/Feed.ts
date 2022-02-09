@@ -4,6 +4,7 @@ type FileSrc = {
 };
 
 type Feed = {
+    id : string,
     title: string;
     date: string;
     video: FileSrc;

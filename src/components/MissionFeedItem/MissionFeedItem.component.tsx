@@ -16,14 +16,9 @@ const cardStyle = {
 
 const MissionFeedItem = (feedItem: Feed): JSX.Element => {
   const t = useSelector(selectTranslations);
-  const lang = useSelector((state: any) => state.i18n.lang);
   return (
     <div className="mission-feed-container">
-      { feedItem.date && (
-        <div className="date-offset">
-          {getLanguageDateFormat(lang, feedItem.date)}
-        </div>
-      )}
+   
 
       <Card
         style={cardStyle}
