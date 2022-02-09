@@ -10,7 +10,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { useSelector } from "react-redux";
 import { selectTranslations } from "../redux/i18n/i18nSlice";
 import "./MissionFeeds.styles.less";
-import { SetMetaTags } from "../utils/SetMetTags";
+import { SetMetaTags } from "../utils/SetMetaTags";
 import groupBy from "lodash/groupBy";
 import { getLanguageDateFormat } from "../utils/GetDateFormat";
 import { v4 as uuidv4 } from "uuid";
